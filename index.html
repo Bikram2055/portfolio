@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikram Babu Subedi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        /* Navbar */
+        header {
+            background-color: #111;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 50px;
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero-content h2 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .hero-content h3 {
+            font-size: 24px;
+            color: #bbb;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn.primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn.secondary {
+            border: 2px solid #007bff;
+            color: #007bff;
+            background-color: #111;
+        }
+
+        .btn.secondary:hover {
+            color: #fff;
+            background-color: #007bff;
+        }
+
+        /* Profile Image */
+        .hero-image {
+            position: relative;
+        }
+
+        .profile-border {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .profile-border img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .experience-tag {
+            background-color: #007bff;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            position: absolute;
+            top: 85%;
+            right: 10px;
+            font-size: 14px;
+        }
+
+        /* About Me Section */
+        .about-me {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+            padding: 50px 50px;
+            background-color: white;
+        }
+
+        /* Heading */
+        .about-me h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #007bff;
+        }
+
+        /* About Container */
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .about-card.about-info {
+            background-color: rgb(227, 224, 224);
+            width: 50%;
+            height: fit-content;
+            padding: 50px 20px;
+
+        }
+
+        .about-card.about-info h3 {
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .about-card.about-info p {
+            margin-top: 10px;
+        }
+
+        /* About Info Card */
+        .about-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: left;
+
+        }
+
+
+
+        /* Badges */
+        .badges {
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge.badge-black {
+            background-color: #222;
+            color: white;
+        }
+
+        /* Skills Grid */
+        .skills-grid-container {
+            width: 50%;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Skills Cards */
+        .emoji {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .about-card h4 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+
+        /* Technical Skills Section */
+        .technical-skills {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 50px 50px;
+            background-color: #111;
+
+        }
+
+        .technical-skills h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #007bff;
+        }
+
+        /* Skills Container */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Skill Cards */
+        .skill-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            width: 100%;
+             max-width: 300px;
+            text-align: left;
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Skill Bars */
+        .skill {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .skill span {
+            font-size: 0.9rem;
+        }
+
+        .progress-bar {
+            background: #444;
+            height: 8px;
+            width: 70%;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+
+        .progress {
+            height: 100%;
+            background: #007bff;
+            border-radius: 5px;
+        }
+
+        /* Additional Skill Badges */
+        .extra-skills {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .extra-skills .badge {
+            width: fit-content;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+             gap: 5px;
+        }
+
+        .extra-skills .badge span {
+            font-size: 1rem;
+        }
+
+
+        /* General Styles */
+        #projects {
+            text-align: center;
+            padding: 50px 50px;
+            background-color: #f5f5f5;
+        }
+
+        #projects h2 {
+            color: #111;
+        }
+
+        .project-content h3 {
+            color: #111;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .section-title span {
+            color: #3b82f6;
+            /* Blue color */
+        }
+
+        /* Projects Container */
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background: white;
+
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            background: #ddd;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-image img {
+            width: 50px;
+        }
+
+        .project-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .project-content h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .tech-stack span {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3b82f6;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .project-links a {
+            color: #3b82f6;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .view-more {
+            margin-top: 30px;
+        }
+
+        .btn {
+            background: #3b82f6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        /* Education Section */
+         #education {
+            background: #f5f5f5;
+            color: #333;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #education .section-title {
+            color: #222;
+        }
+
+         .education-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 30px auto;
+            text-align: left;
+         }
+
+        .education-item h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+         .education-item p {
+             font-size: 1rem;
+             color: #555;
+             margin-top: 5px;
+         }
+
+         .education-item .date {
+             font-size: 0.9rem;
+             color: #888;
+             margin-top: 5px;
+         }
+
+
+        /* Work Experience Section */
+        #work-experience {
+            background: #111;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .section-title span {
+            color: #3b82f6;
+            /* Blue highlight */
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .timeline::after {
+            content: "";
+            position: absolute;
+            width: 4px;
+            background: #3b82f6;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+
+        .timeline-content {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            text-align: left;
+        }
+
+         .timeline-item:nth-child(even) .timeline-content {
+            text-align: left;
+         }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #3b82f6;
+            border-radius: 50%;
+            top: 20px;
+            z-index: 1;
+        }
+
+         .timeline-item:nth-child(odd)::before {
+             right: -9px;
+         }
+
+         .timeline-item:nth-child(even)::before {
+             left: -9px;
+         }
+
+
+        .timeline-content h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .timeline-content h3 span {
+            float: right;
+            color: #3b82f6;
+            font-size: 1rem;
+        }
+
+        .timeline-content .company {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #3b82f6;
+            margin: 5px 0;
+        }
+
+        .timeline-content ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .timeline-content ul li {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .skill-box {
+            background: #222;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 150px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-box i {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            margin-bottom: 5px;
+        }
+
+        .skill-box p {
+            font-size: 0.9rem;
+        }
+
+
+
+        /* testimonial css */
+        .testimonials-section {
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .highlight {
+            color: #007bff;
+        }
+
+        .testimonials-container {
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            position: relative;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        .testimonial-slider {
+            display: flex;
+             overflow: hidden;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .fa-sharp.fa-solid.fa-quote-left {
+            font-size: 2rem;
+            color: #007bff;
+        }
+
+        .testimonial {
+            flex: 0 0 100%;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: left;
+             margin-right: 20px;
+        }
+
+        .testimonial.active {
+            display: block;
+        }
+
+        .quote {
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .client-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .client-info div {
+            text-align: left;
+        }
+
+        .client-info strong {
+            font-size: 1rem;
+            display: block;
+        }
+
+        .client-info p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .prev-btn,
+        .next-btn {
+            background: #fff;
+            border: none;
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            font-size: 24px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .prev-btn {
+            left: 0px;
+        }
+
+        .next-btn {
+            right: 0px;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-container {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+
+             .testimonial-slider {
+                 width: 100%;
+                 margin-right: 0;
+             }
+
+
+            .prev-btn,
+            .next-btn {
+                top: auto;
+                bottom: -50px;
+                position: relative;
+                transform: translateY(0);
+                margin: 10px;
+            }
+
+             .testimonials-container {
+                 flex-direction: column;
+                 align-items: center;
+             }
+             .prev-btn {
+                 left: auto;
+             }
+             .next-btn {
+                 right: auto;
+             }
+        }
+
+
+        /* contact css */
+        .contact-section {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #111;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .highlight {
+            color: #007bff;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            height: fit-content;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .contact-detail .icon {
+            font-size: 1.5rem;
+            background: #007bff;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-detail div {
+            text-align: left;
+        }
+
+        .contact-detail strong {
+            font-size: 1rem;
+            display: block;
+        }
+
+        .contact-detail p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .contact-form {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* footer css */
+        .footer {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 0 50px;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            text-align: left;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p {
+            color: #bbb;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            font-size: 1.2rem;
+            margin-right: 10px;
+            color: #bbb;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+            font-size: 0.8rem;
+            color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <h1>Bikram's Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Project">Projects</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="intro">Hi there! 👋 I'm</p>
+            <h2>Bikram Babu Subedi</h2>
+            <h3>Python Developer</h3>
+            <p class="description">
+                I craft beautiful and functional web experiences with modern technologies.
+                Passionate about creating innovative solutions that make a difference.
+            </p>
+            <div class="buttons">
+                <a href="#contact" class="btn primary">Get in Touch</a>
+                <a href="#projects" class="btn secondary">View Work</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-border">
+                <img src="profile.png" alt="Profile">
+            </div>
+            <div class="experience-tag">Experience Since Oct 2021</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-me" id="about">
+        <h2>About <span class="highlight">Me</span></h2>
+
+        <div class="about-container">
+            <!-- Who I Am Card -->
+            <div class="about-card about-info">
+                <h3>Who I Am</h3>
+                <p>I'm a passionate Python Developer with a strong foundation in web technologies and a keen eye for
+                    design. With experience in building web applications, I specialize in creating
+                    efficient, scalable, and user-friendly solutions.</p>
+                <p>My approach to development combines technical expertise with creative problem-solving, ensuring that
+                    each project not only functions flawlessly but also delivers an exceptional user experience.</p>
+
+                <div class="badges">
+                    <span class="badge">🚀 Problem Solver</span>
+                    <span class="badge">💡 Creative Thinker</span>
+                    <span class="badge">🤝 Team Player</span>
+                </div>
+            </div>
+
+            <!-- Skill Cards -->
+            <div class="skills-grid-container">
+                <div class="skills-grid">
+                    <div class="about-card">
+                        <span class="emoji">🚀</span>
+                        <h4>Fast Learner</h4>
+                        <p>Quick to adapt and master new technologies and frameworks</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="emoji">💻</span>
+                        <h4>Clean Code</h4>
+                        <p>Writing maintainable and efficient code is my priority</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="emoji">🎨</span>
+                        <h4>Design Sense</h4>
+                        <p>Strong understanding of UI/UX principles</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="emoji">🤖</span>
+                        <h4>Tech Enthusiast</h4>
+                        <p>Always exploring new technologies and tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+     <section id="education">
+         <h2 class="section-title">My <span>Education</span></h2>
+         <div class="education-container">
+             <div class="education-item">
+                 <h3>Bachelor Of Computer Engineering</h3>
+                 <p>UNITED TECHNICAL COLLEGE</p>
+                 <p>Bharatpur, Nepal</p>
+                 <p class="date">2017 – 2022</p>
+             </div>
+         </div>
+     </section>
+
+    <!-- Technical Skills -->
+    <section class="technical-skills" id="Skills">
+        <h2>Technical <span class="highlight">Skills</span></h2>
+
+        <div class="skills-container">
+            <!-- Development Skills -->
+            <div class="skill-card">
+                <h3>💻 Development</h3>
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <span class="percentage">90%</span>
+                </div>
+                <div class="skill">
+                    <span>Django REST framework</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 88%;"></div>
+                    </div>
+                    <span class="percentage">88%</span>
+                </div>
+                <div class="skill">
+                    <span>FastAPI</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <span class="percentage">85%</span>
+                </div>
+                 <div class="skill">
+                    <span>Django</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 88%;"></div>
+                    </div>
+                    <span class="percentage">88%</span>
+                </div>
+                 <div class="skill">
+                    <span>Flask</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <span class="percentage">80%</span>
+                </div>
+            </div>
+
+            <!-- Database & DevOps -->
+            <div class="skill-card">
+                <h3>🗄️ Database & DevOps</h3>
+                <div class="skill">
+                    <span>PostgreSQL</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <span class="percentage">85%</span>
+                </div>
+                <div class="skill">
+                    <span>SQL</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <span class="percentage">85%</span>
+                </div>
+                <div class="skill">
+                    <span>Docker</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <span class="percentage">80%</span>
+                </div>
+                 <div class="skill">
+                    <span>Apache/Nginx</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                    <span class="percentage">75%</span>
+                </div>
+                 <div class="skill">
+                    <span>AWS</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                    <span class="percentage">70%</span>
+                </div>
+            </div>
+
+            <!-- Tools & Others -->
+            <div class="skill-card">
+                <h3>🛠️ Tools & Others</h3>
+                <div class="skill">
+                    <span>Git</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 92%;"></div>
+                    </div>
+                    <span class="percentage">92%</span>
+                </div>
+                <div class="skill">
+                    <span>Linux</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <span class="percentage">80%</span>
+                </div>
+                <div class="skill">
+                    <span>Celery</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                    <span class="percentage">70%</span>
+                </div>
+                 <div class="skill">
+                    <span>Jira</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <span class="percentage">85%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Skill Badges -->
+        <div class="extra-skills">
+            <div class="badge badge-black"><span>📱</span> Responsive Design</div>
+            <div class="badge  badge-black"><span>🎯</span> REST APIs</div>
+            <div class="badge  badge-black"><span>🔒</span> Web Security</div>
+            <div class="badge  badge-black"><span>⚡</span> Performance Optimization</div>
+        </div>
+    </section>
+
+    <!-- My Projects -->
+    <section id="projects" id="Project">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/100" alt="Diabetic Retinopathy">
+                </div>
+                <div class="project-content">
+                    <h3>Diabetic Retinopathy</h3>
+                    <p>A deep-learning model for image classification can deliver diabetic retinopathy detection.</p>
+                    <div class="tech-stack">
+                        <span>Deep Learning</span>
+                        <span>Image Classification</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- Add actual links if available -->
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/100" alt="Ecommerce site">
+                </div>
+                <div class="project-content">
+                    <h3>Ecommerce site</h3>
+                    <p>6th sem project, python-django based online product selling website named BIDISHEK.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Django</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- Add actual links if available -->
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more project cards here if needed -->
+
+        </div>
+        <div class="view-more">
+            <a href="#" class="btn">View More Projects</a>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="work-experience" id="Experience">
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content right">
+                    <h3>Python Developer (Mid) <span>Nov 2024 – present</span></h3>
+                    <p class="company">AZminds</p>
+                    <ul>
+                        <li>Contributed to the development of a dynamic prompting system for LLM-based
+                            classification services. Designed and implemented a Prompt model to manage
+                            prompts for various services, and built a wrapper class to interface with the
+                            database, enabling modular and efficient retrieval of service-specific prompts.
+                            Integrated the wrapper into core services to streamline prompt management
+                            and improve maintainability of the LLM request flow.</li>
+                        <li>Built a chatbot using Letta AI Manager for real-time user-agent conversations,
+                            integrating external tools and short/long-term memory for contextual dialogue.
+                            Developed an intelligent agent using LlamaIndex to autonomously interact
+                            with the database for dynamic query responses.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content left">
+                    <h3>Python Developer (Mid) <span>Mar 2024 – Oct 2024</span></h3>
+                    <p class="company">Darkmatter</p>
+                    <ul>
+                        <li>In the Kidsage Project, I developed an educational app that integrates a chat
+                            feature with an AI tutor powered by a Large Language Model (LLM) for
+                            personalized learning. The app includes Unity-based educational games with
+                            data stored via a custom API I created. Additionally, I implemented a
+                            subscription-based payment system, ensuring seamless user access to
+                            premium dashboard and features.</li>
+                        <li>I contributed to the development of an Employee Management System (EMS)
+                            with a focus on the project management feature. My role involved overseeing
+                            project workflows, enhancing task tracking, and ensuring efficient
+                            collaboration among team members, improving overall productivity and
+                            system usability.</li>
+                        <li>I developed all the necessary REST APIs for a horse racing game using Django
+                            Rest Framework (DRF). My work involved designing and implementing APIs to
+                            handle game mechanics, data management, and player interactions, ensuring
+                            smooth integration and performance within the game.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content right">
+                    <h3>Python Developer (Junior/Mid) <span>Jan 2022 – Mar 2024</span></h3>
+                    <p class="company">Code Himalaya</p>
+                    <ul>
+                        <li>I was a crucial part of a hotel booking project, making sure users could safely
+                            use it. With Django Rest Framework (DRF), I helped users explore and reserve
+                            hotel rooms with different payment choices. The project's goal was to offer
+                            travelers a straightforward and secure way to book accommodations, making
+                            their trip planning easier.</li>
+                         <li>In the HR Automation project, I used FastAPI to revamp the CV application
+                            process for developer candidates interested in joining our company. With
+                            FastAPI, I created a straightforward system for profile creation, interview
+                            scheduling, and automated email notifications at each step. I also established
+                            an applicant tracking system for efficient candidate evaluation. This FastAPI-
+                            based solution simplified our recruitment.</li>
+                    </ul>
+                </div>
+            </div>
+
+             <div class="timeline-item">
+                <div class="timeline-content left">
+                    <h3>Python Developer (intern) <span>Oct 2021 – Dec 2021</span></h3>
+                    <p class="company">Code Himalaya</p>
+                    <ul>
+                        <li>Worked under highly qualified senior developer to develop inventory
+                            management system using HTML, CSS, JS, AJAX, Django.</li>
+                        <li>Used Django REST framework to develop API for hostel management system.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Removed placeholder skill boxes as they were redundant with the Technical Skills section -->
+        <!--
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fas fa-users"></i>
+                <p>Team Leadership</p>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-chart-line"></i>
+                <p>Project Management</p>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-rocket"></i>
+                <p>Agile Development</p>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-lightbulb"></i>
+                <p>Problem Solving</p>
+            </div>
+        </div>
+        -->
+    </section>
+
+    <!-- Client Testimonials -->
+    <!-- Keeping testimonials as they are generic placeholders -->
+    <section class="testimonials-section">
+        <h2 class="section-title">Client <span class="highlight">Testimonials</span></h2>
+        <div class="testimonials-container">
+            <button class="prev-btn">&#10094;</button>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <i class="fa-sharp fa-solid fa-quote-left"></i>
+                    <p class="quote">"Exceptional work! The website exceeded our expectations. Professional, responsive,
+                        and delivers high-quality results."</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John Smith">
+                        <div>
+                            <strong>John Smith</strong>
+                            <p>CEO, Tech Corp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <i class="fa-sharp fa-solid fa-quote-left"></i>
+
+                    <p class="quote">"Incredible attention to detail and technical expertise. The project was delivered
+                        on time and exceeded our expectations."</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sarah Johnson">
+                        <div>
+                            <strong>Sarah Johnson</strong>
+                            <p>Product Manager, Innovation Labs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <i class="fa-sharp fa-solid fa-quote-left"></i>
+
+                    <p class="quote">"A true professional who understands both technical and business needs. Would
+                        highly recommend for any web development project."</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Michael Brown">
+                        <div>
+                            <strong>Michael Brown</strong>
+                            <p>Founder, Digital Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn">&#10095;</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const testimonials = document.querySelectorAll(".testimonial");
+            const prevBtn = document.querySelector(".prev-btn");
+            const nextBtn = document.querySelector(".next-btn");
+            let currentIndex = 0;
+
+            function showTestimonial(index) {
+                testimonials.forEach((testimonial, i) => {
+                    testimonial.style.display = i === index ? "block" : "none";
+                });
+            }
+
+            prevBtn.addEventListener("click", function () {
+                currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+                showTestimonial(currentIndex);
+            });
+
+            nextBtn.addEventListener("click", function () {
+                currentIndex = (currentIndex + 1) % testimonials.length;
+                showTestimonial(currentIndex);
+            });
+
+            showTestimonial(currentIndex);
+        });
+    </script>
+
+
+
+
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                <div class="contact-detail">
+                    <span class="icon">📧</span>
+                    <div>
+                        <strong>Email</strong>
+                        <p>subedibikram33@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                     <span class="icon"><i class="fas fa-phone-alt"></i></span>
+                    <div>
+                        <strong>Phone</strong>
+                        <p>9860526428</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span class="icon">📍</span>
+                    <div>
+                        <strong>Location</strong>
+                        <p>Bharatpur-06,Chitwan,Nepal</p>
+                    </div>
+                </div>
+                <!-- Removed Working Hours as not in CV -->
+                <!--
+                <div class="contact-detail">
+                    <span class="icon">⏰</span>
+                    <div>
+                        <strong>Working Hours</strong>
+                        <p>Mon - Fri, 9AM - 6PM</p>
+                    </div>
+                </div>
+                -->
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Subject" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Developer Info -->
+            <div class="footer-section">
+                <h3>Bikram Babu Subedi</h3>
+                <p>Python Developer passionate about creating beautiful and functional web experiences.</p>
+                <div class="social-icons">
+                    <a href="https://github.com/Bikram2055" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/bikram-subedi-8451181b4" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <!-- Add other social links if available and desired -->
+                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#technical-skills">Skills</a></li>
+                    <li><a href="#work-experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📧 subedibikram33@gmail.com</p>
+                <p>📍 Bharatpur-06,Chitwan,Nepal</p>
+                 <p>📞 9860526428</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2024 Bikram Babu Subedi. All rights reserved.</p>
+            <p>Designed and built with ❤️ using modern technologies</p>
+        </div>
+    </footer>
+
+    <!-- FontAwesome for social icons -->
+    <script src="https://kit.fontawesome.com/f8e7335df3.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
